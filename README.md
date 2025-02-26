@@ -31,9 +31,9 @@ MoodBoardBuilder (MBB)es una herramienta digital para crear tableros de inspirac
 
 - HTML5 y CSS3 para la estructura y estilo
 - JavaScript parala interactividad
-- Una librerías imple de drag-and-drop como "Sortable.js" 
+- Una librerías imple de drag-and-drop como "Sortable.js"
 - La API nativa de HTML5 para subir archivos
-- LocalStorage para guardar los proyectos temporalmente 
+- LocalStorage para guardar los proyectos temporalmente
 - Publicar el proyectoen Netlify
 
 ## ALCANCE
