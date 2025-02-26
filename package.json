@@ -1,0 +1,23 @@
+{
+  "name": "moodboardbuilder_shifta",
+  "version": "1.0.0",
+  "description": "MoodBoardBuilder (MBB)es una herramienta digital para crear tableros de inspiración visual (tipo Pinterest), que son muy utilizados en fotografía, diseño, y proyectos creativos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quesada90/MoodboardBuilder_Shifta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quesada90/MoodboardBuilder_Shifta/issues"
+  },
+  "homepage": "https://github.com/quesada90/MoodboardBuilder_Shifta#readme",
+  "dependencies": {
+    "parcel": "^2.13.3"
+  }
+}
