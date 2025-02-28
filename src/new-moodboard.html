@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodboard Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css"> <!-- all css -->
+</head>
+<body>
+    <div class="container">
+
+        <main class="moodboard-page">
+            <div class="page-header">
+                <a href="index.html" class="back-button">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h1 class="title-h1">New Moodboard</h1>
+                <div class="header-actions">
+                    <div class="alt-button edit-button" id="edit-button">
+                        <i class="fa-solid fa-pencil"></i>
+                        <span class="tooltip">edit moodboard</span>
+                    </div>
+                    <div class="alt-button download-button" id="download-button">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <span class="tooltip">download images</span>
+                    </div>
+                    <div class="alt-button share-button" id="share-button">
+                        <i class="fa-solid fa-link"></i>
+                        <span class="tooltip">copy link</span>
+                        <span class="tooltip copied-tooltip">link copied!</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="image-counter">
+                <span class="moodboard-count"><span>0</span> images</span>
+            </div>
+            
+            <div class="empty-state-message">
+                <p>This moodboard doesn't have any images yet. Add some to get started!</p>
+            </div>
+            
+            
+            <!-- Upload images section-->
+            <div class="upload-section">
+                <div class="upload-box">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    <p class="upload-text">Drag & upload images</p>
+                </div>
+                
+                <div class="url-upload">
+                    <div class="url-button">
+                        <i class="fa-solid fa-link"></i>
+                        <span>Add URLs</span>
+                    </div>
+                </div>
+            </div>
+        
+        
+    </div>
+</body>
+</html>

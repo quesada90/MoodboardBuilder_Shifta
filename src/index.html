@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodboard Builder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css"> <!-- all css -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="notification-banner" id="notification-banner">
+            <p>Moodboard deleted</p>
+        </div>
+        <main class="home-page">
+            <h1 class="title-h1">Moodboard Builder</h1>
+            
+            <div class="top-nav">
+                <span class="moodboard-count"><span>3</span> moodboards</span>
+                <div class="alt-button share-button" id="share-button">
+                    <i class="fa-solid fa-link"></i>
+                    <span class="tooltip">copy link</span>
+                    <span class="tooltip copied-tooltip">link copied!</span>
+                </div>
+            </div>
+
+            <div class="moodboard-grid">
+                <!-- Moodboard Card 1 -->
+                <a href="urban-sports.html" class="moodboard-card">
+                    <div class="card-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1681494703620-7bed31293c6a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmFzaGlvbiUyMHN0cmVldHxlbnwwfHwwfHx8MA%3D%3D" alt="Urban Sports">
+                    </div>
+                    <div class="card-title">
+                        <h4 class="title-h4">Urban Sports</h4>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="card-line"></div>
+                </a>
+
+                <!-- Moodboard Card 2 -->
+                <div class="moodboard-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1532332248682-206cc786359f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZhc2hpb24lMjBzdHJlZXR8ZW58MHx8MHx8fDA%3D" alt="Hip Hop">
+                    </div>
+                    <div class="card-title">
+                        <h4 class="title-h4">Hip Hop</h4>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="card-line"></div>
+                </div>
+
+                <!-- Moodboard Card 3 -->
+                <div class="moodboard-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1528120369764-0423708119ae?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fGZhc2hpb24lMjBzdHJlZXR8ZW58MHx8MHx8fDA%3D" alt="Casual Style">
+                    </div>
+                    <div class="card-title">
+                        <h4 class="title-h4">Casual Style</h4>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="card-line"></div>
+                </div>
+
+                <!-- Empty Card / Add New - Now links to the modal using hash fragment -->
+                <a href="#edit-modal" class="moodboard-card moodboard-card-empty" id="add-moodboard">
+                    <div class="card-image card-image-empty">
+                        <span class="plus-icon">+</span>
+                    </div>
+                    <div class="card-title">
+                        <h4 class="title-h4">Add moodboard</h4>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="card-line"></div>
+                </a>
+            </div>
+        </main>
+
+        <!-- Modal with ID matching the hash fragment -->
+        <div class="modal edit-modal" id="edit-modal">
+            <div class="modal-content">
+                <div class="modal-top">
+                    <a href="#" class="modal-close">
+                        <i class="fa-solid fa-close"></i>
+                    </a>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="board-cover-section">
+                        <div class="section-title">BOARD COVER</div>
+                        <div class="cards-empty" id="cover-upload">
+                            <span class="plus-icon">+</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-section">
+                        <div class="section-title">MOODBOARD NAME</div>
+                        <div class="input-frame">
+                            <span class="moodboard-name">Street photoshoot</span>
+                            <i class="fa-solid fa-pen"></i>
+                        </div>
+                        <div class="error-message" style="display: none;">ERROR! PLEASE TRY AGAIN</div>
+                    </div>
+                </div>
+                
+                <div class="button-row button-row-create">
+                    <a href="new-moodboard.html" class="btn btn-success" id="save-button">
+                        <span>CREATE MOODBOARD</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Delete confirmation modal -->
+        <div class="modal delete-confirm-modal" id="delete-confirm-modal">
+            <div class="modal-content delete-confirm-content">
+                <h3>Are you sure?</h3>
+                <p>Are you sure you want to delete this moodboard? This action cannot be undone.</p>
+                <div class="button-row">
+                    <a href="#" class="btn btn-secondary" id="cancel-delete">GO BACK</a>
+                    <a href="index.html" class="btn btn-danger" id="confirm-delete">YES, DELETE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

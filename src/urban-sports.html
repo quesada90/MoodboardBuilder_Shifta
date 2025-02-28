@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodboard Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- -->
+
+    <link rel="stylesheet" href="css/styles.css"> <!-- all css -->
+</head>
+<body>
+    <div class="container">
+        
+        <main class="moodboard-page">
+            <div class="page-header">
+                <a href="index.html" class="back-button">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h1 class="title-h1">Urban Sports</h1>
+                <div class="header-actions">
+                    <div class="alt-button edit-button" id="edit-button">
+                        <i class="fa-solid fa-pencil"></i>
+                        <span class="tooltip">edit moodboard</span>
+                    </div>
+                    <div class="alt-button download-button" id="download-button">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <span class="tooltip">download images</span>
+                    </div>
+                    <div class="alt-button share-button" id="share-button">
+                        <i class="fa-solid fa-link"></i>
+                        <span class="tooltip">copy link</span>
+                        <span class="tooltip copied-tooltip">link copied!</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="image-counter">
+                <span class="moodboard-count"><span>8</span> images</span>
+            </div>
+            
+            <div class="empty-state-message" style="display: none;">
+                <p>This moodboard doesn't have any images yet. Add some to get started!</p>
+            </div>
+            
+            <div class="image-grid">
+                <!-- Image 1 -->
+                <div class="image-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1681494700976-861938fe0513?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZhc2hpb24lMjBzdHJlZXR8ZW58MHx8MHx8fDA%3D" alt="Yellow outfit">
+                    <div class="image-overlay">
+                        <button class="image-action-btn zoom-btn" data-img="https://plus.unsplash.com/premium_photo-1681494700976-861938fe0513?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZhc2hpb24lMjBzdHJlZXR8ZW58MHx8MHx8fDA%3D">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button class="image-action-btn delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1520367445093-50dc08a59d9d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZhc2hpb24lMjBzdHJlZXR8ZW58MHx8MHx8fDA%3D" alt="Fashion photo">
+                    <div class="image-overlay">
+                        <button class="image-action-btn zoom-btn" data-img="https://images.unsplash.com/photo-1520367445093-50dc08a59d9d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZhc2hpb24lMjBzdHJlZXR8ZW58MHx8MHx8fDA%3D">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button class="image-action-btn delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="image-card">
+                    <img src="https://cdn.animaapp.com/projects/67bcc4df1df9f051856162af/releases/67bcc50a3af4aadb2ea84029/img/image-1-5.png" alt="Fashion model">
+                    <div class="image-overlay">
+                        <button class="image-action-btn zoom-btn" data-img="https://cdn.animaapp.com/projects/67bcc4df1df9f051856162af/releases/67bcc50a3af4aadb2ea84029/img/image-1-5.png">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button class="image-action-btn delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Image 4 -->
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1532332248682-206cc786359f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZhc2hpb24lMjBzdHJlZXR8ZW58MHx8MHx8fDA%3D" alt="Fashion photo">
+                    <div class="image-overlay">
+                        <button class="image-action-btn zoom-btn" data-img="https://images.unsplash.com/photo-1532332248682-206cc786359f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZhc2hpb24lMjBzdHJlZXR8ZW58MHx8MHx8fDA%3Dg">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button class="image-action-btn delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Image 5 -->
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFzaGlvbiUyMHN0cmVldCUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fHww" alt="Fashion model">
+                    <div class="image-overlay">
+                        <button class="image-action-btn zoom-btn" data-img="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFzaGlvbiUyMHN0cmVldCUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fHww">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button class="image-action-btn delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Image 6 -->
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1568364419877-50ce357e22e5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGZhc2hpb24lMjBzdHJlZXQlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHx8MA%3D%3D" alt="Fashion photo">
+                    <div class="image-overlay">
+                        <button class="image-action-btn zoom-btn" data-img="https://images.unsplash.com/photo-1568364419877-50ce357e22e5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGZhc2hpb24lMjBzdHJlZXQlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHx8MA%3D%3D">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button class="image-action-btn delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Image 7 -->
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1721637635502-b0abaaa75edb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGZhc2hpb24lMjBzdHJlZXQlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHx8MA%3D%3D" alt="Fashion model">
+                    <div class="image-overlay">
+                        <button class="image-action-btn zoom-btn" data-img="https://images.unsplash.com/photo-1721637635502-b0abaaa75edb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGZhc2hpb24lMjBzdHJlZXQlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHx8MA%3D%3D">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button class="image-action-btn delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Image 8 -->
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1604051013808-ca2a7a7e7d99?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjI2fHxmYXNoaW9uJTIwc3RyZWV0JTIwcGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D" alt="Fashion photo">
+                    <div class="image-overlay">
+                        <button class="image-action-btn zoom-btn" data-img="https://images.unsplash.com/photo-1604051013808-ca2a7a7e7d99?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjI2fHxmYXNoaW9uJTIwc3RyZWV0JTIwcGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button class="image-action-btn delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upload images section-->
+            <div class="upload-section">
+                <div class="upload-box">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    <p class="upload-text">Drag & upload images</p>
+                </div>
+                
+                <div class="url-upload">
+                    <div class="url-button">
+                        <i class="fa-solid fa-link"></i>
+                        <span>Add URLs</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        
+    </div>
+</body>
+</html>
